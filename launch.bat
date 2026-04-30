@@ -21,11 +21,11 @@ pip install yfinance pandas requests beautifulsoup4 openpyxl matplotlib --quiet
 
 :: ── Download tickers ──────────────────────────────────────────────────────────
 echo Downloading tickers...
-python download_tickers.py
+python "%REPO_DIR%\download_tickers.py"
 
 :: ── Run main ──────────────────────────────────────────────────────────────────
 echo Running 200 WMA analysis...
-python main.py
+python "%REPO_DIR%\main.py"
 
 echo.
 echo All done!
