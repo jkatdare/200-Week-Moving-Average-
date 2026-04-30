@@ -2,10 +2,10 @@
 setlocal
 
 set REPO_URL=https://github.com/jkatdare/200-Week-Moving-Average-.git
-set REPO_DIR=%USERPROFILE%\Desktop\200-Week-Moving-Average
+set REPO_DIR=%HOMEDRIVE%%HOMEPATH%\Desktop\200-Week-Moving-Average
 
 :: ── Clone or pull ─────────────────────────────────────────────────────────────
-if exist "%REPO_DIR%" (
+if exist "%REPO_DIR%\.git" (
     echo Updating from GitHub...
     cd /d "%REPO_DIR%"
     git pull
