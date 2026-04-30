@@ -3,8 +3,10 @@ identifies stocks trading near or below the 200 week moving average
 
 stocks from S&P500, NASDAQ100, and DJIA30
 
-options:
+options in config:
+
 remove an index or two
+
 change max_above_pct
 
 copy launcher.py into your IDE
