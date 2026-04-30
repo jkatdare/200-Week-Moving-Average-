@@ -1,15 +1,3 @@
-"""
-200 WMA Launcher
-================
-Copy this file into your IDE and run it. It will:
-  1. Download the repo as a ZIP from GitHub
-  2. Extract it to a folder on your Desktop
-  3. Install required dependencies
-  4. Download the latest tickers
-  5. Run the 200 WMA analysis
-
-No Git required.
-"""
 
 import io
 import sys
@@ -34,20 +22,20 @@ def run(cmd, cwd=None):
 def download_and_extract():
     print(f"Downloading repo ZIP from GitHub...")
 
-    # Remove old folder if it exists
+    
     if REPO_DIR.exists():
         shutil.rmtree(REPO_DIR)
 
-    # Download ZIP into memory
+  
     with urllib.request.urlopen(REPO_ZIP) as response:
         zip_data = response.read()
 
-    # Extract to Desktop
+    
     DESKTOP.mkdir(exist_ok=True)
     with zipfile.ZipFile(io.BytesIO(zip_data)) as z:
         z.extractall(DESKTOP)
 
-    # GitHub names extracted folders something like "200-Week-Moving-Average--main"
+  
     extracted = next(DESKTOP.glob("200-Week-Moving-Average*-main"))
     extracted.rename(REPO_DIR)
     print(f"Extracted to {REPO_DIR}")
