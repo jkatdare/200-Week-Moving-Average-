@@ -16,3 +16,9 @@ options in config:
 remove an index or two
 
 change max_above_pct
+
+
+TO RUN
+
+SAVE LAUNCHER AS A .PY FILE
+FOLDER WITH CODE AND RESULTS ON DESKTOP
