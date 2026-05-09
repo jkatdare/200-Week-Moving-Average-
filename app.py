@@ -251,8 +251,8 @@ if run_btn:
         return "color: #3fb950" if val >= 0 else "color: #f85149"
 
     styled = results.style \
-        .applymap(color_signal, subset=["Signal"]) \
-        .applymap(color_pct, subset=["% vs 200 WMA"]) \
+        .map(color_signal, subset=["Signal"]) \
+        .map(color_pct, subset=["% vs 200 WMA"]) \
         .format({"Current Price": "${:.2f}", "200 WMA": "${:.2f}", "% vs 200 WMA": "{:.2f}%"})
 
     st.dataframe(styled, use_container_width=True, height=500)
